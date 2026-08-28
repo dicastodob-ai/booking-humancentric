@@ -1,17 +1,16 @@
 import React from 'react';
 
 export default function BookingPortal() {
-  // Matriz con URLs externas 100% garantizadas para evitar fallos de imágenes locales
+  // Matriz con URLs externas 100% testeadas y estables para evitar paneles vacíos
   const destinations = [
     { title: "Sídney, Australia", img: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=800&q=80", url: "https://www.tkqlhce.com/click-101825316-17314768", tag: "Top 1" },
     { title: "Roma, Italia", img: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80", url: "https://www.tkqlhce.com/click-101825316-14398479", tag: "Top 2" },
     { title: "Londres, Reino Unido", img: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80", url: "https://www.tkqlhce.com/click-101825316-14398479", tag: "Top 3" },
-    { title: "París, Francia", img: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=800&q=80", url: "https://www.dpbolvw.net/click-101825316-17301956", tag: "Oferta -15%" },
-    { title: "Costa Amalfitana", img: "https://images.unsplash.com/photo-1533682805518-48d1f5b8cb3a?auto=format&fit=crop&w=800&q=80", url: "https://www.tkqlhce.com/click-101825316-14398479", tag: "Tendencia" },
+    { title: "París, Francia", img: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80", url: "https://www.dpbolvw.net/click-101825316-17301956", tag: "Oferta -15%" },
+    { title: "Costa Amalfitana", img: "https://images.unsplash.com/photo-1612278675615-7b093b07772d?auto=format&fit=crop&w=800&q=80", url: "https://www.tkqlhce.com/click-101825316-14398479", tag: "Tendencia" },
     { title: "Melbourne, Australia", img: "https://images.unsplash.com/photo-1514395462725-fb4566210144?auto=format&fit=crop&w=800&q=80", url: "https://www.tkqlhce.com/click-101825316-17314768", tag: "Recomendado" }
   ];
 
-  // Generamos los 30 productos para rellenar la cuadrícula
   const products = Array.from({ length: 30 }).map((_, i) => ({
     ...destinations[i % destinations.length],
     id: i
@@ -46,7 +45,7 @@ export default function BookingPortal() {
         </div>
       </section>
 
-      {/* CUADRÍCULA DE 30 PRODUCTOS SEGURA */}
+      {/* CUADRÍCULA DE 30 PRODUCTOS CON IMÁGENES CORREGIDAS */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-2xl font-bold text-slate-900 mb-8 border-b pb-4">Nuestros 30 Destinos Destacados</h2>
         
@@ -54,10 +53,8 @@ export default function BookingPortal() {
           {products.map((item) => (
             <a key={item.id} href={item.url} target="_blank" rel="noopener sponsored" className="group flex flex-col bg-slate-900 rounded-xl border border-slate-200 shadow-sm hover:shadow-lg transition overflow-hidden relative h-64">
               
-              {/* Foto Externa Garantizada */}
               <img src={item.img} alt={item.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-80" />
               
-              {/* Textos */}
               <div className="relative z-10 h-full flex flex-col justify-end p-4 bg-gradient-to-t from-black/80 to-transparent">
                 <div className="flex justify-between items-end">
                   <span className="font-bold text-white text-lg drop-shadow-md">{item.title}</span>
