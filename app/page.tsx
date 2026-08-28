@@ -1,9 +1,9 @@
 import React from 'react';
 
 export default function BookingPortal() {
-  // Matriz de destinos limpios (SIN Costa Amalfitana)
+  // Matriz de 5 destinos con URLs externas 100% garantizadas (Sídney corregido)
   const destinations = [
-    { title: "Sídney, Australia", img: "/image_1e25a2.jpg", url: "https://www.tkqlhce.com/click-101825316-17314768", tag: "Top 1" },
+    { title: "Sídney, Australia", img: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=800&q=80", url: "https://www.tkqlhce.com/click-101825316-17314768", tag: "Top 1" },
     { title: "Roma, Italia", img: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80", url: "https://www.tkqlhce.com/click-101825316-14398479", tag: "Top 2" },
     { title: "Londres, Reino Unido", img: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80", url: "https://www.tkqlhce.com/click-101825316-14398479", tag: "Top 3" },
     { title: "París, Francia", img: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80", url: "https://www.dpbolvw.net/click-101825316-17301956", tag: "Oferta -15%" },
